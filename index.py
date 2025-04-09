@@ -9,7 +9,7 @@ web3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
 
 UNISWAP_ROUTER = web3.to_checksum_address("0x10ED43C718714eb63d5aA57B78B54704E256024E")
 BLEND_TOKEN = web3.to_checksum_address("0xda52b818c1348bFee27989E2a0DF39224A3E52fA")
-USDT_TOKEN = web3.to_checksum_address("0x55d398326f99059ff775485246999027b3197955")  # Endereço do USDT
+USDT_TOKEN = web3.to_checksum_address("0x55d398326f99059ff775485246999027b3197955")
 WBNB = web3.to_checksum_address("0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c")
 
 PRIVATE_KEY = ""
@@ -55,8 +55,8 @@ def approve_blend():
 def swap_blend_to_usdt(amount_in_wei):
     slippage = 0.05
     amount_out_min = int(amount_in_wei * (1 - slippage))
-    deadline = web3.eth.get_block("latest")["timestamp"] + 300  # Corrigido aqui
-    path = [BLEND_TOKEN, USDT_TOKEN]  # Caminho atualizado para USDT
+    deadline = web3.eth.get_block("latest")["timestamp"] + 300
+    path = [BLEND_TOKEN, USDT_TOKEN]
     max_fee, priority_fee = get_gas_prices()
     
     try:
