@@ -16,7 +16,6 @@ The Swap Trust Wallet Bot is an automated tool designed to facilitate token swap
 
 -   Trust Wallet installed and configured.
 -   Python 3.x installed on your system.
--   Basic knowledge of cryptocurrency and decentralized exchanges.
 
 ## Disclaimer
 
